@@ -1,4 +1,10 @@
-import Foundation
+import SwiftUI
 
-print("hello, world!")
-Thread.sleep(forTimeInterval: 1)
+@main
+struct HandmadeApp: App {
+    var body: some Scene {
+        WindowGroup {
+            Text("hello, world!")
+        }
+    }
+}
