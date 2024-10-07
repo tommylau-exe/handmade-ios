@@ -1,7 +1,7 @@
 #!/bin/sh
-set -e
+set -ex
 
-IPHONE_15_SIM_ID="9340DADD-23AC-42E0-A6AF-BA720B728DD9"
-xcrun simctl bootstatus "$IPHONE_15_SIM_ID" -b > /dev/null
-xcrun simctl install "$IPHONE_15_SIM_ID" ./handmade-ios.app
-xcrun simctl launch --console "$IPHONE_15_SIM_ID" com.example.handmade-ios
+sim_id="<YOUR-SIMULATOR-ID>"
+xcrun simctl bootstatus $sim_id -b >/dev/null
+xcrun simctl install $sim_id ./handmade-ios.app
+xcrun simctl launch --console $sim_id com.example.handmade-ios
